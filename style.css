@@ -1,0 +1,132 @@
+/* Resets and Variables */
+
+/* Variables */
+
+:root{
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.8125rem;
+    --fw-regular: 500;
+    --fw-bold: 700;
+
+    --vd-gray-blue: hsl(217, 19%, 35%);
+    --dd-blue: hsl(214, 17%, 51%);
+    --gray-blue: hsl(212, 23%, 69%);
+    --l-gray-blue: hsl(210, 46%, 95%);
+}
+
+/* Resets */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+}
+
+img,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+p,
+h1,
+h2 {
+    word-wrap: break-word;
+}
+
+/* Utility classes */
+
+.flex-element {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 56em) {
+    .flex-responsive {
+        flex-direction: row;
+    }
+}
+
+
+/* General styles */
+
+body {
+    background-color: var(--l-gray-blue);
+    display: grid;
+    place-content: center;
+    line-height: 1.6;
+}
+
+p {
+    color: var(--gray-blue);
+    font-weight: var(--fw-bold);
+}
+
+h1 {
+    color: var(--vd-gray-blue);
+    font-size: 1.3rem;
+    font-weight: var(--fw-bold);
+}
+
+main {
+    background-color: #fff;
+    width: min(87%, 650px);
+    margin: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+main .img {
+    background-image: url(./images/drawers.jpg);
+    background-size: 105%;
+    background-position: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: min(528px, 20rem);
+}
+
+main .wrapper {
+    padding-inline: clamp(2.2rem, 2.2rem + .5vw, 4rem);
+    padding-block: clamp(1.2rem, 1.2rem + .5vw, 3rem);
+    gap: 2rem;
+}
+
+main .text {
+    flex-basis: 100%;
+    gap: 1rem;
+}
+
+main .social-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-info .social-text {
+    margin-right: 3rem;
+}
+
+.social-info .share-btn {
+    background-color: var(--l-gray-blue);
+    border-radius: 50%;
+    border: none;
+    background-image: url(./images/icon-share.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.profile-img {
+    width: 3rem;
+    border-radius: 50%;
+}
